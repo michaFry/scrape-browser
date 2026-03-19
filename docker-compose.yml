@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  scrape-browser:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4321:4321"           # Mappe le port local 4321 vers le conteneur
+    environment:
+      - PORT=4321             # Optionnel : si tu utilises process.env.PORT
+      - NODE_ENV=production   # Pour mode prod
+    restart: unless-stopped   # Redémarre auto en cas de crash
+    volumes:
+      - .:/app                # Optionnel : pour dev, sync le code local
+    # Si besoin de proxy ou config avancée plus tard :
+    # extra_hosts:
+    #   - "host.docker.internal:host-gateway"
