@@ -28,11 +28,5 @@
     "@types/node": "^22.7.4",
     "tsx": "^4.19.1",
     "typescript": "^5.6.2"
-  
-}
-"dependencies": {
-  ... tes deps existantes,
-  "playwright-extra": "^1.0.0",  // version récente, check npm si besoin
-  "puppeteer-extra-plugin-stealth": "^2.11.2"  // compatible Playwright via fork ou direct
-}
+  }
 }
